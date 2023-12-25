@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Scheme Switcher</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <h1>Color Schema Switcher</h1>
+  <div class="color-container">
+    <div class="color-block" id="color1"></div>
+    <div class="color-block" id="color2"></div>
+    <div class="color-block" id="color3"></div>
+    <div class="color-block" id="color4"></div>
+    <!-- Add more color blocks as needed -->
+  </div>
+
+  
+</body>
+<script>
+  buttons = document.querySelectorAll('.color-block')
+  body = document.querySelector('body')
+  // console.log(body)
+  buttons.forEach(button => {
+    // console.log(button);
+    button.addEventListener('click', function(e)
+    {
+      console.log(e)
+      console.log(e.target)
+      if(e.target.id === 'color1')
+      {
+        body.style.backgroundColor = '#32adff';
+      }
+      if(e.target.id === 'color2')
+      {
+        body.style.backgroundColor = '#32ff88';
+      }
+      if(e.target.id === 'color3')
+      {
+        body.style.backgroundColor = '#ff3c27';
+      }
+      if(e.target.id === 'color4')
+      {
+        body.style.backgroundColor = '#ee35ff';
+      }
+    })
+  });
+</script>
+</html>
